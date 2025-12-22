@@ -1,114 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>SW – Spelling Words</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Helvetica, Arial, sans-serif;
-            background: #d6d6d6;
-            color: #111;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f2f2f2;
+            color: #222;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 32px 20px;
+            padding: 40px 20px;
+        }
+
+        header {
             text-align: center;
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 20px 0 10px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: #555;
         }
 
         .icon {
-            width: 140px;
-            height: 140px;
-            border-radius: 28px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 24px;
+            width: 160px;
+            border-radius: 32px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
-        h1 {
-            font-size: 34px;
-            margin-bottom: 8px;
+        .hero-screen {
+            margin: 60px auto;
+            display: block;
+            max-width: 300px;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
         }
 
-        .subtitle {
-            font-size: 18px;
-            color: #444;
-            margin-bottom: 32px;
+        .cta {
+            display: inline-block;
+            background: #111;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin-top: 30px;
         }
 
-        .screenshots img {
+        section {
+            margin-top: 100px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        .screens {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .screens img {
             width: 100%;
-            max-width: 700px;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            margin: 20px 0;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
-        .text {
-            text-align: left;
-            font-size: 17px;
-            line-height: 1.6;
-            background: rgba(255,255,255,0.6);
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background: white;
             padding: 24px;
-            border-radius: 16px;
-            margin-top: 32px;
+            border-radius: 18px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
         }
 
         footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #555;
+            text-align: center;
+            margin-top: 120px;
+            color: #777;
+            font-size: 0.9rem;
         }
     </style>
 </head>
-<body>
 
+<body>
 <div class="container">
 
-    <img src="icon.jpg" alt="SW App Icon" class="icon">
+    <!-- HEADER -->
+    <header>
+        <img src="icon.jpg" alt="SW App Icon" class="icon"/>
+        <h1>SW</h1>
+        <p>Spelling Words — simple, focused spelling practice for children</p>
 
-    <h1>SW – Spelling Words</h1>
-    <div class="subtitle">
-        A simple spelling game for kids and parents
-    </div>
+        <img src="screen1.jpg" alt="SW app screenshot" class="hero-screen"/>
 
-    <div class="screenshots">
-        <img src="screen1.jpg" alt="App Screenshot">
-        <!-- добавишь позже -->
-        <!-- <img src="screen2.jpg"> -->
-    </div>
+        <a class="cta" href="#">
+            Install on iPhone or iPad
+        </a>
+    </header>
 
-    <div class="text">
-        <p>
-            At my daughter’s school, children are given weekly spelling homework —
-            usually a list of 10 words to memorise.
-        </p>
+    <!-- SCREENSHOTS -->
+    <section>
+        <h2>App Screens</h2>
 
-        <p>
-            I noticed that, like many modern children, she learns spelling much better
-            through games on a device, especially while we spend up to 30 minutes a day
-            driving to school.
-        </p>
+        <div class="screens">
+            <img src="screen1.jpg" alt="Word lists screen">
+            <img src="screen2.jpg" alt="Spelling game screen">
+            <img src="screen-3.jpg" alt="Settings screen">
+        </div>
+    </section>
 
-        <p>
-            Existing apps don’t allow adding all custom words, so I built
-            <strong>SW – Spelling Words</strong> myself.
-        </p>
+    <!-- FEATURES -->
+    <section>
+        <h2>Why SW?</h2>
 
-        <p>
-            If you’d like to test the app via TestFlight, please email me and I’ll add you
-            to the testing list.
-        </p>
-    </div>
+        <div class="features">
+            <div class="feature">
+                <strong>Simple by design</strong><br/>
+                No clutter, no distractions — only spelling practice.
+            </div>
+
+            <div class="feature">
+                <strong>Adjustable difficulty</strong><br/>
+                Choose the level that fits the learner.
+            </div>
+
+            <div class="feature">
+                <strong>Male & female voices</strong><br/>
+                Comfortable pronunciation options.
+            </div>
+
+            <div class="feature">
+                <strong>Works fully offline</strong><br/>
+                Perfect for travel and car rides.
+            </div>
+
+            <div class="feature">
+                <strong>Privacy first</strong><br/>
+                No analytics, no tracking, no data collection.
+            </div>
+
+            <div class="feature">
+                <strong>Gamified learning</strong><br/>
+                Learning feels like a game, not homework.
+            </div>
+        </div>
+    </section>
 
     <footer>
-        © 2025 SW – Spelling Words
+        © 2025 SW – Spelling Words<br/>
+        Built for calm, focused learning
     </footer>
 
 </div>
-
 </body>
 </html>
