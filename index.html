@@ -126,6 +126,14 @@
             from { transform: scale(0.9); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
+        .appstore-badge {
+    margin-top: 30px;
+}
+
+.appstore-badge img {
+    height: 60px;
+}
+        
     </style>
 </head>
 
@@ -140,9 +148,12 @@
 
         <img src="screen1.jpg" alt="SW app screenshot" class="hero-screen"/>
 
-        <a class="cta" href="#">
-            Install on iPhone or iPad
-        </a>
+        <div class="appstore-badge">
+    <a href="https://apps.apple.com/app/idXXXXXXXXXX" target="_blank">
+        <img src="appstore-badge.svg" alt="Download on the App Store">
+    </a>
+</div>
+        
     </header>
 
     <!-- SCREENSHOTS -->
